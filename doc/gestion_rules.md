@@ -33,3 +33,17 @@
 -	L’utilisateur aura un adresse mail.
 -	L’utilisateur aura un sexe.
 -	L’utilisateur aura un mot de passe.
+
+
+## UTILISATION 
+
+- L'utilisateur aura la possibilté d'ajouter une tache.
+- L'utilisateur aura la possibilté d'entrée un nom de tache.
+- L'utilisateur aura la possibilté de modifier un nom de tache.
+- L'utilisateur aura la possibilté d'entrée une description de tache.
+- L'utilisateur aura la possibilté de modifier une description de tache.
+- L'utilisateur aura la possibilté de mettre l'état de la tache sur fini ou non.
+- L'utilisateur aura la possibilité d'utiliser une date.
+- L'utilisateur aura la possibilité d'entrée un element dans le calendrier.
+- L'utilisateur aura la possibilité de modifier un élément dans le calendrier
+- l'utilisateur aura la possibilité de modifier une date du calendrier.
