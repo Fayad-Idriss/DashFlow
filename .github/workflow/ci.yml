@@ -1,14 +1,12 @@
-name: Integration Continue 
-
+name: Integration Continue
 
 on: 
   push:
     branches:
-    - main
+      - main
   pull_request:
     branches:
-    - main 
-
+      - main
 
 jobs: 
   frontend-test:
@@ -24,6 +22,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 17
+
+    - name: Install dependencies (frontend)
+      run: npm install
+
+    - name: Run ESLint (frontend)
+      run: npm run lint
 
   backend-test:
     runs-on: ubuntu-latest
