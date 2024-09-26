@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Calendar from './page/Calendar/calendar';
+import TasklLine from './page/TaskLine/taskLine';
+import Home from './page/Home/home';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
@@ -13,6 +15,8 @@ if (rootElement) {
       <Router>
         <Routes>
           <Route path="/Calendar" element={<Calendar />} />
+          <Route path="/taskLine" element={<TasklLine />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </React.StrictMode>
