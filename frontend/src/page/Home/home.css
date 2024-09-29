@@ -1,0 +1,68 @@
+
+
+
+/* HEADER */
+
+.div_{
+    height: 100vh; 
+    background: linear-gradient(to right, #1f1e1e 70%, #1C1C1E 30%);
+    padding: 50px;
+}
+
+
+.block_1{
+    width: 70%;
+}
+
+
+.block_2{
+    width: 30%;
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    width: 30%;
+}
+
+.header_bar{
+    width: 1900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_bar_search{
+   display: flex;
+   justify-content: space-around;
+   background-color: #404040;
+   width: 300px;
+   border-radius: 15px;
+}
+
+
+.header_bar_p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    color: white;
+}
+
+.header_text{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    color: white;
+}
+
+
+.icone{
+    color: white;
+    margin-top: 18px;
+    margin-left: 100px;
+}
+
