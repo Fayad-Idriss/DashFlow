@@ -5,6 +5,8 @@ import logo from '../../image/logo.png'
 /* importation des FontAwesome */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'; 
+import { faCalendar} from '@fortawesome/free-solid-svg-icons'; 
+import { faBell } from '@fortawesome/free-solid-svg-icons'; 
 
 //Import Google font
 <style>
@@ -27,9 +29,56 @@ function Home() {
                       </div>
                    </div>
                 </header>
-            </div>
-            <div className='block_2'>
 
+                {/* Corp de page  */}
+                <div className='corp'>
+                   <div className='corp_div'>
+                     <div className='corp_div_text'>
+                        <h3 className='corp_div_p'> Hi M. BACARI ! </h3>
+                        <p className='corp_div_p'> Welcome back M. BACARI You have a lot of work </p>
+                        <p className='corp_div_p'> Your Score </p>
+                     </div>
+                   </div>
+                </div>   
+
+                <h2 className='title'> Dashboard </h2>   
+
+                <div className='corp_list'>
+                    <p className='corp_div_p'> Booking </p>
+                    <p className='corp_div_p'> Amenities </p>
+                    <p className='corp_div_p'> Tasks </p>
+                    <p className='corp_div_p'> Locality </p>
+                </div> 
+
+                <div className='corp_div_bancaire'>
+                </div>  
+
+                <div className='corp_div_cart'>
+                    <div className='cart'></div>
+                    <div className='cart'></div>
+                    <div className='cart'></div>
+                    <div className='cart'></div>
+                </div>      
+            </div>
+
+
+            <div className='block_2'>
+                <div className='header_2'> 
+                   <FontAwesomeIcon icon={faBell} className='cloche'/>
+                   <FontAwesomeIcon icon={faCalendar} className='calendar' />
+                   <div className='header_2_search'>
+                     <div className='name'> Fayad-Idriss BACARI </div>
+                     <div className='picture'></div>
+                   </div>
+                </div>
+
+                <div className='calendar_corp'>
+
+                </div>
+
+                <div className='task_corp'>
+
+                </div>
             </div>
         </div>
     )
