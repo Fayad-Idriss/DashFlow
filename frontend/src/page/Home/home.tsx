@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import '../Home/home.css';
 import logo from '../../image/logo.png';
+import Calendar from '../../component/calendar/calendar'; 
+import TaskLine from '../../component/taskLine/TaskLine';
 
 /* importation des FontAwesome */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCalendar, faBell } from '@fortawesome/free-solid-svg-icons'; 
-
-// Import Google font
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-</style>
 
 // Définition d'un type pour les données de solde bancaire
 type Balance = {
@@ -19,22 +16,18 @@ type Balance = {
 };
 
 function Home() {
-    // États pour gérer les données de solde
     const [balance, setBalance] = useState<Balance | null>(null);
 
-    // Utiliser useEffect pour récupérer le solde bancaire lors du chargement du composant
     useEffect(() => {
         const fetchBalance = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/balance'); // Remplacer par l'URL de ton API
+                const response = await fetch('http://localhost:3001/api/balance'); 
                 if (!response.ok) {
                     throw new Error('Erreur lors de la récupération des données : ' + response.statusText);
                 }
                 const data = await response.json();
-                
-                // Assurer que les données correspondent au format attendu
                 if (data && data.account && typeof data.balance === 'number' && data.currency) {
-                    setBalance(data); // Mettre à jour l'état avec les données récupérées
+                    setBalance(data);
                 } else {
                     console.error("Format des données incorrect :", data);
                 }
@@ -42,9 +35,8 @@ function Home() {
                 console.error("Erreur lors de la récupération des données de solde :", error);
             }
         };
-
         fetchBalance();
-    }, []); // [] signifie que cela s'exécute une seule fois lors du montage du composant
+    }, []); 
 
     return (
         <div className='div_'>   
@@ -63,7 +55,6 @@ function Home() {
                     </div>
                 </header>
 
-                {/* Corps de page */}
                 <div className='corp'>
                     <div className='corp_div'>
                         <div className='corp_div_text'>
@@ -83,7 +74,6 @@ function Home() {
                     <p className='corp_div_p'> Locality </p>
                 </div> 
 
-                {/* Section bancaire */}
                 <div className='corp_div_bancaire'> 
                     <div className='div_bancaire'>
                         <h1 className='titre_info_bancaire'>Bank Account</h1>
@@ -123,8 +113,14 @@ function Home() {
                     </div>
                 </div>
 
-                <div className='calendar_corp'></div>
-                <div className='task_corp'></div>
+                {/* Insertion du calendrier ici */}
+                <div className='calendar_corp'>
+                    <Calendar /> {/* Composant calendrier */}
+                </div>
+                
+                <div className='task_corp'>
+                    <TaskLine /> {/* Insertion du composant TaskLine */}
+                </div>
             </div>
         </div>
     );
