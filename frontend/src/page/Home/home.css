@@ -3,6 +3,10 @@
 
 /* HEADER */
 
+body{
+    height: 100vh; 
+    background: linear-gradient(to right, #1f1e1e 70%, #1C1C1E 30%); 
+}
 
 .div_{
     display: flex;
@@ -109,6 +113,8 @@
 }
 
 .corp_div_bancaire{
+    display: flex;
+    justify-content: space-around;
     height: 250px;
     width: 100%;
     margin-top: 10px;
@@ -128,7 +134,7 @@
 
 .cart{
     width: 24%;
-    height: 140px;
+    height: 130px;
     border-radius: 20px;
     background-color: #404040;
 }
@@ -203,8 +209,26 @@
 
 .task_corp{
     width: 100%;
-    height: 245px;
+    height: 240px;
     margin-top: 40px;
     background-color: #404040;
     border-radius: 15px;
 }
+
+
+/* CSS VUE SOLDES BANCAIRE */
+ 
+.titre_info_bancaire{
+    color: green;
+}
+
+.chiffre{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: green;
+}
+
+
+
+/* FIN CSS SOLDE BANCAIRE */
